@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--开启注解-->
+	<context:annotation-config/>
+	<!--    指定要扫描的包，这些包下的注解才会生效-->
+	<context:component-scan base-package="com.lh"/>
+	<bean name="Person" class="com.lh.pojo.Person">
+		<property name="name" value="张三"/>
+		<property name="age" value="12"/>
+		<!--		<lookup-method/>-->
+		<!--		<replaced-method/>-->
+	</bean>
+
+</beans>
